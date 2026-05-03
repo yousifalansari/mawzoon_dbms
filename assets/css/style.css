@@ -1,0 +1,252 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5e6d3;
+    padding-bottom: 60px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #a3472b;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #7a2f1a;
+}
+
+/* Section titles (FIXED) */
+.section-title {
+    color: #f5e6d3;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 18px 12px 6px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Logout pinned bottom */
+.logout {
+    padding: 10px 0;
+}
+
+/* ================= MAIN ================= */
+.main {
+    margin-left: 220px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* ================= CARDS ================= */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* ================= TABLES ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background-color: #a3472b;
+    color: white;
+    font-size: 13px;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Prevent wide action column */
+.actions {
+    white-space: nowrap;
+}
+
+td.actions {
+    width: 1%;
+}
+
+/* ================= BUTTON SYSTEM ================= */
+
+/* Base */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none !important;
+    color: white !important;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Primary (theme) */
+.btn.primary {
+    background-color: #a3472b;
+}
+
+/* Action buttons */
+.btn.view {
+    background-color: #a3472b;
+}
+
+.btn.edit {
+    background-color: #a3472b;
+}
+
+.btn.delete {
+    background-color: #a3472b;
+}
+
+/* Hover */
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Make <button> behave like .btn */
+button {
+    all: unset;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #a3472b;
+    color: white;
+    text-align: center;
+}
+
+/* ================= AUTH ================= */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.auth-card input,
+.auth-card select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+/* ================= ORDER ITEMS ================= */
+.item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ================= INPUTS ================= */
+input, select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* ================= DASHBOARD ================= */
+
+/* Stats row */
+.stats-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.stat p {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Grid layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Compact tables */
+.dashboard-grid table {
+    font-size: 12px;
+}
+
+/* Compact buttons inside cards */
+.dashboard-grid .btn {
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* ================= SMALL IMPROVEMENTS ================= */
+a {
+    transition: 0.2s ease;
+}
+
+
+.sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.logout a {
+    display: block;
+    padding: 10px 14px;
+    color: #ffdddd;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    background-color: #7a2f1a;
+}
