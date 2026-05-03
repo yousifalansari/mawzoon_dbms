@@ -3,7 +3,7 @@
 ![Mawzoon logo](assets/images/Mawzoon%20Logo.png)
 
 A full-stack database-driven management system developed for the COSC312 DBMS project.  
-The system simulates a catering/event management platform with full CRUD operations, relational integrity, triggers, and views.
+The system simulates a catering/event data management platform with full CRUD operations, relational integrity, triggers, and views.
 
 
 ---
