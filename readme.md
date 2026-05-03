@@ -166,54 +166,77 @@ $host = "localhost";
 $user = "root";
 $password = "";
 $dbname = "mawzoon_dbms";
+```
 4. Run the System
 
 Start Apache and MySQL, then go to:
+```
+http://localhost/mawzoon_frontend/ 
+```
+---
+### 5. Login
 
-http://localhost/mawzoon_frontend/
-5. Login
+Use an existing account or register a new user using the registration page.
 
-Use a registered user or create one using the registration page.
+---
 
-🔒 Security Considerations
-Prepared statements used to prevent SQL injection
-Session-based authentication
-Restricted access to protected pages
-Cache-control headers implemented
-🧠 Design Decisions
-Staff is view-only → requires admin-level control
-Orders are deletable → operational flexibility
-Customers are not deletable → preserve history
-Payments are append-only → financial integrity
-📈 Future Improvements
+## 🔒 Security Considerations
+
+- Prepared statements used to prevent SQL injection  
+- Session-based authentication  
+- Restricted access to protected pages  
+- Cache-control headers implemented  
+
+---
+
+## 🧠 Design Decisions
+
+- Staff is view-only → requires admin-level control  
+- Orders are deletable → allows operational flexibility  
+- Customers are not deletable → preserves historical data integrity  
+- Payments are append-only → ensures financial consistency  
+
+---
+
+## 📈 Future Improvements
 
 The system is designed to be extendable. Possible enhancements include:
 
-Role-based access control (Admin vs Employee)
-Full delivery management system
-Staff assignment system (assigned_to table)
-Inventory restocking automation
-Advanced analytics dashboard
-API integration
-UI/UX improvements (responsive design, charts)
-🧪 Limitations
-Some tables are not fully exposed in frontend
-No role-based permissions implemented
-Limited validation on certain inputs
-No real-time updates (no AJAX)
-👨‍💻 Authors
-Yousif Alansari
-Rashid Bomtaia
+- Role-based access control (Admin vs Employee)  
+- Full delivery management system  
+- Staff assignment system (`assigned_to` table)  
+- Inventory restocking automation  
+- Advanced analytics dashboard  
+- API integration  
+- UI/UX improvements (responsive design, charts)  
 
-COSC312 – Database Management Systems
-2026
+---
 
-📌 Notes
+## 🧪 Limitations
+
+- Some tables are not fully exposed in the frontend  
+- No role-based permissions implemented  
+- Limited validation on certain inputs  
+- No real-time updates (no AJAX)  
+
+---
+
+## 👨‍💻 Authors
+
+- Yousif Alansari  
+- Rashid Bomtaia  
+
+COSC312 – Database Management Systems  
+2026  
+
+---
+
+## 📌 Notes
 
 This project demonstrates:
 
-Relational database design
-Normalization and integrity constraints
-Trigger-based automation
-View-based abstraction
-Full-stack database interaction
+- Relational database design  
+- Normalization and integrity constraints  
+- Trigger-based automation  
+- View-based abstraction  
+- Full-stack database interaction  
