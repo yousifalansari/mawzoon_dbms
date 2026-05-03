@@ -243,3 +243,14 @@ This project demonstrates:
 - Trigger-based automation  
 - View-based abstraction  
 - Full-stack database interaction  
+
+## 🤖 AI Assistance Disclosure
+
+This project was developed with the assistance of AI-based tools (e.g., ChatGPT) for tasks such as:
+
+- Code debugging and troubleshooting  
+- Refining structure and organization  
+- UI/UX improvement suggestions  
+- General development guidance  
+
+All core system design, database schema, and implementation decisions were developed and validated by the authors.
