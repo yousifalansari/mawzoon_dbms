@@ -229,7 +229,7 @@ The system is designed to be extendable. Possible enhancements include:
 - Yousif Alansari  
 - Rashid Bomtaia  
 
-COSC312 – Database Management Systems  
+COSC312 – Design and Usage of Database
 2026  
 
 ---
