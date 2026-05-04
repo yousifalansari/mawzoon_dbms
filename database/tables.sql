@@ -1,0 +1,78 @@
+CREATE TABLE EVENTS (
+  Event_ID INT AUTO_INCREMENT,
+  Event_name VARCHAR(100) NOT NULL,
+  Event_date DATE NOT NULL,
+  Location VARCHAR(150) NOT NULL,
+  Venue_type VARCHAR(50) NOT NULL,
+  Status VARCHAR(20) NOT NULL,
+  PRIMARY KEY (Event_ID)
+);
+
+CREATE TABLE CUSTOMER (
+  Customer_ID INT AUTO_INCREMENT,
+  First_name VARCHAR(50) NOT NULL,
+  Last_name VARCHAR(50) NOT NULL,
+  Phone VARCHAR(15) NOT NULL,
+  Email VARCHAR(100) UNIQUE NOT NULL,
+  Address VARCHAR(200),
+  PRIMARY KEY (Customer_ID)
+);
+
+CREATE TABLE MENU_ITEM (
+  Item_ID INT AUTO_INCREMENT,
+  Item_name VARCHAR(100) NOT NULL,
+  Category VARCHAR(50),
+  Price DECIMAL(6,2) NOT NULL,
+  Description TEXT,
+  PRIMARY KEY (Item_ID)
+);
+
+CREATE TABLE ORDERS (
+  Order_ID INT AUTO_INCREMENT,
+  Order_type VARCHAR(20) NOT NULL,
+  Order_time DATETIME NOT NULL,
+  Status VARCHAR(20) NOT NULL,
+  Total_amount DECIMAL(8,2) DEFAULT 0,
+  PRIMARY KEY (Order_ID)
+);
+
+CREATE TABLE PAYMENT (
+  Payment_ID INT AUTO_INCREMENT,
+  Payment_method VARCHAR(20) NOT NULL,
+  Amount_paid DECIMAL(8,2) NOT NULL,
+  Payment_time DATETIME NOT NULL,
+  Status VARCHAR(20),
+  Order_ID INT UNIQUE NOT NULL,
+  PRIMARY KEY (Payment_ID),
+  FOREIGN KEY (Order_ID) REFERENCES ORDERS(Order_ID)
+);
+
+CREATE TABLE DELIVERY (
+  Delivery_ID INT AUTO_INCREMENT,
+  Delivery_address VARCHAR(200) NOT NULL,
+  Delivery_status VARCHAR(20),
+  Estimated_time DATETIME,
+  Actual_time DATETIME,
+  Order_ID INT UNIQUE NOT NULL,
+  PRIMARY KEY (Delivery_ID),
+  FOREIGN KEY (Order_ID) REFERENCES ORDERS(Order_ID)
+);
+
+CREATE TABLE INVENTORY (
+  Inventory_ID INT AUTO_INCREMENT,
+  Ingredient_name VARCHAR(100) NOT NULL,
+  Unit VARCHAR(20),
+  Quantity_available DECIMAL(8,2) NOT NULL,
+  Reorder_level DECIMAL(8,2),
+  PRIMARY KEY (Inventory_ID)
+);
+
+CREATE TABLE STAFF (
+  Staff_ID INT AUTO_INCREMENT,
+  First_name VARCHAR(50) NOT NULL,
+  Last_name VARCHAR(50) NOT NULL,
+  Phone VARCHAR(15),
+  Role VARCHAR(50),
+  Email VARCHAR(100) UNIQUE,
+  PRIMARY KEY (Staff_ID)
+);
